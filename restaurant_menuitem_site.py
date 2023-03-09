@@ -56,18 +56,18 @@ def menuItems():
 def restaurantMenu(restaurant_id):
     restaurant = session.query(Restaurant).filter_by(id = restaurant_id).one()
     menuitems = session.query(MenuItem).filter_by(restaurant_id = restaurant_id)
-    output = ""
-    for item in menuitems:
-        output += item.name
-        output += "</br>"
-        output += item.price
-        output += "</br>"
-        output += item.description
-        output += "</br>"
-        output += item.course
-        output += "</br></br>"
-    return output
-    
+    # output = ""
+    # for item in menuitems:
+    #     output += item.name
+    #     output += "</br>"
+    #     output += item.price
+    #     output += "</br>"
+    #     output += item.description
+    #     output += "</br>"
+    #     output += item.course
+    #     output += "</br></br>"
+    # return output
+    return render_template('menu.html', restaurant = restaurant, menuitems = menuitems)
 
 
 # Task 1: Create route for newMenuItem function here
