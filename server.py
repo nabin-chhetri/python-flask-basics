@@ -75,7 +75,11 @@ class WebServerHandler(BaseHTTPRequestHandler):
                 self.end_headers()
                 
                 output += "<html><body>"
+<<<<<<< HEAD
                 output += "menuitem"
+=======
+                output += menuitem
+>>>>>>> 139cb7c2de38c1abdce0ded2a39ae402aa1a5286
                 output += "</body></html>"
                 self.wfile.write(bytes(output, "utf8"))
                 return
